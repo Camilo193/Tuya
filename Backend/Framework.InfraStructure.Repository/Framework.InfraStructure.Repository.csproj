@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Application.DTO\Framework.Application.DTO.csproj" />
+    <ProjectReference Include="..\Framework.InfraStructure.Data\Framework.InfraStructure.Data.csproj" />
+    <ProjectReference Include="..\Framework.InfraStructure.Interface\Framework.InfraStructure.Interface.csproj" />
+    <ProjectReference Include="..\Framework.Transversal.Common\Framework.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

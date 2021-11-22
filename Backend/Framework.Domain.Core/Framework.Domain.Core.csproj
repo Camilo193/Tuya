@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Application.DTO\Framework.Application.DTO.csproj" />
+    <ProjectReference Include="..\Framework.Domain.Entity\Framework.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Framework.Domain.Interface\Framework.Domain.Interface.csproj" />
+    <ProjectReference Include="..\Framework.InfraStructure.Interface\Framework.InfraStructure.Interface.csproj" />
+  </ItemGroup>
+
+</Project>

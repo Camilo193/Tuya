@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Application.DTO\Framework.Application.DTO.csproj" />
+    <ProjectReference Include="..\Framework.Application.Interface\Framework.Application.Interface.csproj" />
+    <ProjectReference Include="..\Framework.Domain.Entity\Framework.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Framework.Domain.Interface\Framework.Domain.Interface.csproj" />
+    <ProjectReference Include="..\Framework.Transversal.Common\Framework.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>
