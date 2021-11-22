@@ -53,10 +53,12 @@ namespace Framework.Services.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddSwaggerGen();
             //services.AddAutoMapper(x => x.AddProfile(new MappingProfile()));
             services.AddAutoMapper(Assembly.GetAssembly(typeof(MappingProfile)));
             //Conectarme a una base de datos con Entity Framework
-            services.AddDbContextPool<EFConnectionFactory>(options => options.UseSqlServer(Configuration.GetConnectionString("DigitalWareSQLServer")));
+            services.AddDbContextPool<EFConnectionFactory>(options => options.UseSqlServer(Configuration.GetConnectionString("TuyaSQLServer")));
 
 
             //services.AddAutoMapper(typeof(Startup));
@@ -211,11 +213,11 @@ namespace Framework.Services.WebApi
             }
 
             ////Configuración Swagger
-            //app.UseSwagger();
-            //app.UseSwaggerUI(c =>
-            //{
-            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API Globus V1");
-            //});
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseRouting();
 
