@@ -161,47 +161,6 @@ namespace Framework.Services.WebApi
                         ClockSkew = TimeSpan.Zero
                     };
                 });
-
-
-
-            ////Configuración de Swagger
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new Info
-            //    {
-            //        Version = "v1",
-            //        Title = "Globus Sistemas S.A.S API Rest",
-            //        Description = "API para el desarrollo y soluciones de las aplicaciones para Globus Sistemas S.A.S",
-            //        TermsOfService = "None",
-            //        Contact = new Contact
-            //        {
-            //            Name = "José Sandoval Isasa",
-            //            Email = "jose.sandoval@globussistemas.net",
-            //            Url = "http://globussistemas.net"
-            //        },
-            //        License = new License
-            //        {
-            //            Name = "Globus LICX",
-            //            Url = "http://globussistemas.net/license"
-            //        }
-            //    });
-            //    //Set the comments path for the Swagger JSON and UI.
-            //    var xmlFile = $"{ Assembly.GetExecutingAssembly().GetName().Name }.xml";
-            //    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-            //    c.IncludeXmlComments(xmlPath);
-            //    //Definiendo Token en el Swagger    
-            //    c.AddSecurityDefinition("Authorization", new ApiKeyScheme)
-            //      {
-            //          Description = "Authorization by API Key",
-            //          In = "header",
-            //          Type = "apiKey",
-            //          Name = "Authorization"
-            //      });
-            //    c.AddSecurityRequirenment(new Directionary<string, IEnumerable<string>>
-            //    {
-            //      { "Authorization", new string[0] }
-            //    });
-            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -212,11 +171,11 @@ namespace Framework.Services.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            ////Configuración Swagger
+            //Configuración Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger JCUS");
             });
 
             app.UseRouting();
